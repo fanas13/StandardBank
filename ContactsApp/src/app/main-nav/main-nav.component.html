@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? ' ' : 'over'" [opened]="false">
+    <mat-nav-list>
+      <div class="addnewContactContainer">
+        <button (click)="openAddContact()" class="addNewContactButton" mat-raised-button><mat-icon class="addIcon">add</mat-icon>Create Contact</button>
+      </div>
+      <a mat-list-item href="#" class="active"><mat-icon class="leftNavIcons">face</mat-icon><a class="inline">All Contacts</a><a class="counterContainer"></a></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="amber">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="open close side nav" class="menuIcon">menu</mat-icon>
+      </button>
+      <mat-icon aria-label="open close side nav" class="profileIconContainer profileIcon">account_circle</mat-icon>
+      <span class="contactsHeader">Contacts</span>
+      <mat-grid-list cols="2">
+        <mat-grid-tile></mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <mat-form-field appearance="legacy" class="searchInputContainer">
+            <input matInput placeholder="Search" (keyup)="applyFilter($event.target.value)">
+            <mat-icon matPrefix class="inputIconsContainer inputIcons">search</mat-icon>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

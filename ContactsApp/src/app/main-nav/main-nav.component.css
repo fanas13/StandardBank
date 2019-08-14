@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 90px
+}
+
+.mat-toolbar {
+  background-color: #ffffff
+}
+
+
+.sidenav-container {
+  height: 100%
+}
+
+.menuIcon {
+  font-weight: 200;
+}
+
+.contactsHeader {
+  color: #5f6368;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.profileIcon {
+  font-size: 42px;
+  color: #0072AA
+}
+
+.profileIconContainer {
+  height: 42px !important;
+  width: 42px !important;
+  margin: 5px !important
+}
+
+.mat-sidenav-fixed {
+  width: 280px !important;
+  box-shadow: none !important
+}
+
+.addnewContactContainer {
+  margin: 20px !important
+}
+
+.addNewContactButton {
+}
+
+.addNewContactButton {
+  border-radius: 50px;
+  width: 100%;
+  height: 50px
+}
+
+.addIcon {
+  text-align: left;
+  font-size: 32px;
+  font-weight: bolder;
+  margin-right: 10px;
+  vertical-align: top;
+  line-height: 22px
+}
+
+.addNewContactButton {
+  font-size: 18px;
+  line-height: 1px;
+  font-weight: 400;
+  color: #0072AA
+}
+
+.leftNavIcons {
+  margin-right: 20px;
+}
+
+.counterContainer {
+  text-align: right;
+  font-weight: 500;
+  list-style: none;
+  width: 100%;
+  text-align: right;
+}
+
+.inline {
+  white-space: nowrap
+}
+
+.active {
+  color: #0072AA;
+  background-color: #78add252;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.filterInputContainer {
+  width: 100%;
+}
+
+
+.mat-grid-tile {
+  height: 90px
+}
+
+.inputIconsContainer {
+  margin-right: 20px;
+  vertical-align: middle;
+  padding: 5px;
+  margin: 0 15px 7px 14px
+}
+
+.inputIcons {
+  font-weight: 100
+}

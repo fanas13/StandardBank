@@ -8,5 +8,23 @@ body {
 }
 
 .appContainer {
-  margin: 10px
+  margin: 10px;
+  width: 100%
 }
+
+.mat-grid-list {
+  width: 100%
+}
+
+.mat-form-field-underline {
+  height: 0px !important
+}
+
+.phonebookContainer {
+  width: 100%
+}
+
+.mat-table {
+  box-shadow: none !important
+}
+

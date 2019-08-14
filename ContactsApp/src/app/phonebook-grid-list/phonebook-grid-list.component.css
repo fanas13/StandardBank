@@ -1,0 +1,21 @@
+.phonebookContainer {
+  width: 100% !important
+}
+
+.titleContainer {
+  background-color: #21AA47;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.titleCopyContainer {
+  text-align: center;
+  padding-top: 15px
+}
+
+.titleCopy {
+  color: #ffffff;
+  font-size: 18px
+}
