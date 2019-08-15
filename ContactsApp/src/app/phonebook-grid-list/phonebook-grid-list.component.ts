@@ -21,10 +21,6 @@ export class PhonebookGridListComponent implements OnInit {
     this.phonebookService.renderInitials();
   }
 
-  editContact(id: number) {
-    this.phonebookService.editContact(id)
-  }
-
   deleteContact(id: number) {
     this.phonebookService.deleteContact(id)
   }

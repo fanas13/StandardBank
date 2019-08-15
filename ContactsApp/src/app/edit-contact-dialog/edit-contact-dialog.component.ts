@@ -12,7 +12,7 @@ import { debug } from 'util';
 export class EditContactDialogComponent implements OnInit {
   editContactForm: FormGroup;
 
-  constructor(public phonebookService: PhonebookService, @Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef) {
+  constructor(public phonebookService: PhonebookService, @Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<EditContactDialogComponent>) {
     this.editContactForm = new FormGroup({
       //name edit validation
       nameFormEditControl: new FormControl('', [
@@ -31,12 +31,6 @@ export class EditContactDialogComponent implements OnInit {
     });
   }
 
-  //calling the delete method from contactService
-  editCotact(): void {
-    //this.phonebookService.editConta(this.contactId);
-    this.dialogRef.close();
-  }
-
   //get for easy access to form fields
   get f() { return this.editContactForm.controls; }
 
@@ -46,9 +40,9 @@ export class EditContactDialogComponent implements OnInit {
 
     contacts.forEach((contact) => {
       if (contact.position === contactId) {
-        this.editContactForm.controls.nameFormEditControl.value = contact.name;
-        this.editContactForm.controls.surnameFormEditControl.value = contact.surname;
-        this.editContactForm.controls.phoneNumberFormEditControl.value = contact.phone;
+        this.editContactForm.controls.nameFormEditControl.setValue(contact.name);
+        this.editContactForm.controls.surnameFormEditControl.setValue(contact.surname);
+        this.editContactForm.controls.phoneNumberFormEditControl.setValue(contact.phone);
       }
     });
   }
