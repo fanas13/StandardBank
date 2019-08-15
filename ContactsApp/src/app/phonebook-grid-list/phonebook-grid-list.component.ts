@@ -33,6 +33,9 @@ export class PhonebookGridListComponent implements OnInit {
   openDeleteModal(id: number) {
     const dialogRef = this.dialog.open(DeleteContactDialogComponent, {
       width: '500px',
+      data: {
+        contactId: id
+      }
     });
 
     dialogRef.afterClosed().subscribe(result => {

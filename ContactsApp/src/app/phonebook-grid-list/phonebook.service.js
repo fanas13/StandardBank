@@ -3,7 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var table_1 = require("@angular/material/table");
 //default static data defined 
 var ELEMENT_DATA = [
-    { position: 1, name: 'Nicholson', surname: 'Galela', phone: '840739163' }
+    { position: 0, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+    { position: 1, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+    { position: 2, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+    { position: 3, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+    { position: 4, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+    { position: 5, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+    { position: 6, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
 ];
 var PhonebookService = /** @class */ (function () {
     function PhonebookService() {
@@ -13,10 +19,16 @@ var PhonebookService = /** @class */ (function () {
     PhonebookService.prototype.applyFilter = function (filterValue) {
         this.dataSource.filter = filterValue.trim().toLowerCase();
     };
-    PhonebookService.prototype.renderEditDeleteButton = function () {
-        return ("test");
-    };
     PhonebookService.prototype.editContact = function (contactId) {
+    };
+    //delte contact
+    PhonebookService.prototype.deleteContact = function (id) {
+        var contacts = this.dataSource.filteredData;
+        //filter the json array
+        var updatedContactList = contacts.filter(function (contact) {
+            return contact.position !== id.contactId;
+        });
+        this.dataSource.data = updatedContactList;
     };
     //method to create contact
     PhonebookService.prototype.createContant = function (contact) {

@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Delete Contact</h1>
+<div mat-dialog-content>
+  Are your sure you want to delete contact
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeModal()">Cancel</button>
+  <button mat-button cdkFocusInitial (click)="deleteContact()" type="submit">Delete</button>
+</div>

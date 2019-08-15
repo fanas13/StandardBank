@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { debug } from 'util';
 
 export interface PeriodicElement {
   position: number;
@@ -10,7 +11,13 @@ export interface PeriodicElement {
 
 //default static data defined 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Nicholson', surname: 'Galela', phone: '840739163' }
+  { position: 0, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+  { position: 1, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+  { position: 2, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+  { position: 3, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+  { position: 4, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+  { position: 5, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+  { position: 6, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
 ];
 
 export class PhonebookService {
@@ -28,8 +35,16 @@ export class PhonebookService {
 
   }
 
-  deleteContact(contactId) {
+  //delte contact
+  deleteContact(id) {
+    let contacts = this.dataSource.filteredData;
 
+    //filter the json array
+    let updatedContactList = contacts.filter(function (contact) {
+      return contact.position !== id.contactId;
+    });
+
+    this.dataSource.data = updatedContactList;
   }
 
   //method to create contact

@@ -1,0 +1,29 @@
+<div class="contactsHeader">Add Contacts</div>
+<form [formGroup]="contactForm" (ngSubmit)="addContant()">
+  <mat-form-field class="full-width" appearance="legacy">
+    <input matInput placeholder="Name" required formControlName="nameFormControl" name="name">
+    <mat-error *ngIf="f.nameFormControl.errors">
+      <div *ngIf="f.nameFormControl.errors.required">Name is <strong>required</strong></div>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="legacy">
+    <input matInput placeholder="Surname" required formControlName="surnameFormControl" name="surname">
+    <mat-error *ngIf="f.surnameFormControl.errors">
+      <div *ngIf="f.surnameFormControl.errors.required">Surname is <strong>required</strong></div>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <span matPrefix>+27 &nbsp;</span>
+    <input type="tel" matInput placeholder="Phone Number" maxlength="10" required formControlName="phoneNumberFormControl" name="phoneNumberr">
+    <mat-error *ngIf="f.phoneNumberFormControl.errors">
+      <div *ngIf="f.phoneNumberFormControl.errors.required">Phone number is <strong>required</strong></div>
+    </mat-error>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button cdkFocusInitial type="submit">Add Contact</button>
+  </div>
+</form>
+
+
+

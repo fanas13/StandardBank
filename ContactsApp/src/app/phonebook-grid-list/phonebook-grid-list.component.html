@@ -27,8 +27,8 @@
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef  width="5%"> Action </th>
     <td mat-cell *matCellDef="let element" class="actionContainer" width="10%">
-      <button mat-button (click)="openEditModal(element.position)" class="warning actionButtonContainer"><mat-icon matPrefix class=" actionIcons">delete</mat-icon></button>
-      <button mat-button (click)="openDeleteModal(element.position)" class="danger actionButtonContainer"><mat-icon matPrefix class=" actionIcons">edit</mat-icon></button>
+      <button mat-button (click)="openEditModal(element.position)" class="warning actionButtonContainer"><mat-icon matPrefix class=" actionIcons">edit</mat-icon></button>
+      <button mat-button (click)="openDeleteModal(element.position)" class="danger actionButtonContainer"><mat-icon matPrefix class=" actionIcons">delete</mat-icon></button>
     </td>
   </ng-container>
 
