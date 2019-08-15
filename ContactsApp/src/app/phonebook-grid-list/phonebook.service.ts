@@ -31,8 +31,13 @@ export class PhonebookService {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  editContact(contactId) {
+  editContact(contactId, name, surname, phone) {
+    let contacts = this.dataSource.filteredData;
 
+    const currentContact = contacts.find(contact => contact.position === contactId);
+    Object.assign(currentContact, { name, surname, phone });
+
+    this.renderInitials();
   }
 
   //delte contact

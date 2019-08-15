@@ -9,7 +9,7 @@ var ELEMENT_DATA = [
     { position: 3, name: 'Nicholson 1', surname: 'Galela', phone: '444444444' },
     { position: 4, name: 'Nicholson 1', surname: 'Galela', phone: '555555555' },
     { position: 5, name: 'Nicholson 1', surname: 'Galela', phone: '666666666' },
-    { position: 6, name: 'Nicholson 1', surname: 'Galela', phone: '777777777' },
+    { position: 6, name: 'Nicholson 1', surname: 'Galela', phone: '777777777  ' },
 ];
 var PhonebookService = /** @class */ (function () {
     function PhonebookService() {
@@ -19,7 +19,15 @@ var PhonebookService = /** @class */ (function () {
     PhonebookService.prototype.applyFilter = function (filterValue) {
         this.dataSource.filter = filterValue.trim().toLowerCase();
     };
-    PhonebookService.prototype.editContact = function (contactId) {
+    PhonebookService.prototype.editContact = function (contactId, name, surname, phone) {
+        var contacts = this.dataSource.filteredData;
+        //filter the json array
+        var updatedContactList = contacts.filter(function (contact) {
+            debugger;
+            //return contact.position !== id.contactId;
+            contact.name = "test name";
+        });
+        this.dataSource.data = updatedContactList;
     };
     //delte contact
     PhonebookService.prototype.deleteContact = function (id) {

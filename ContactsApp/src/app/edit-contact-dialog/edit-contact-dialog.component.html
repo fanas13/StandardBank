@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>Update Contact</h1>
-<form [formGroup]="editContactForm" (ngSubmit)="addContant()">
+<form [formGroup]="editContactForm" (ngSubmit)="updateContant()">
   <mat-form-field class="full-width" appearance="legacy">
     <input matInput placeholder="Name" required formControlName="nameFormEditControl" name="name">
     <mat-error *ngIf="f.nameFormEditControl.errors">

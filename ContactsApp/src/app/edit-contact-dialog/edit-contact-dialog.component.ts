@@ -44,15 +44,21 @@ export class EditContactDialogComponent implements OnInit {
     const contacts = this.data.contactDetails;
     const contactId = this.data.contactId;
 
-    debugger
     contacts.forEach((contact) => {
-      debugger
       if (contact.position === contactId) {
         this.editContactForm.controls.nameFormEditControl.value = contact.name;
         this.editContactForm.controls.surnameFormEditControl.value = contact.surname;
         this.editContactForm.controls.phoneNumberFormEditControl.value = contact.phone;
       }
     });
+  }
+
+  //method to call the edit contact function from the phonebook service
+  updateContant(): void {
+    if (this.editContactForm.valid) {
+      this.phonebookService.editContact(this.data.contactId, this.editContactForm.get('nameFormEditControl').value, this.editContactForm.get('surnameFormEditControl').value, this.editContactForm.get('phoneNumberFormEditControl').value);
+      this.dialogRef.close();
+    }
   }
 
 }
