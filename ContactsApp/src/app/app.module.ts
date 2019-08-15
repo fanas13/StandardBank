@@ -11,6 +11,8 @@ import { PhonebookService } from './phonebook-grid-list/phonebook.service';
 import { AddContactDialogComponent } from './add-contact-dialog/add-contact-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditContactDialogComponent } from './edit-contact-dialog/edit-contact-dialog.component';
+import { DeleteContactDialogComponent } from './delete-contact-dialog/delete-contact-dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MainNavComponent,
     PhonebookGridListComponent,
     AddContactDialogComponent,
+    EditContactDialogComponent,
+    DeleteContactDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [AppComponent, MainNavComponent, PhonebookGridListComponent, AddContactDialogComponent],
   providers: [PhonebookService],
   bootstrap: [AppComponent],
-  entryComponents: [AddContactDialogComponent]
+  entryComponents: [AddContactDialogComponent, EditContactDialogComponent, DeleteContactDialogComponent]
 })
 export class AppModule { }
