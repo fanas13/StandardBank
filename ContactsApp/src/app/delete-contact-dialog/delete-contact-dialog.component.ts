@@ -8,7 +8,6 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
   styleUrls: ['./delete-contact-dialog.component.css']
 })
 
-
 export class DeleteContactDialogComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<DeleteContactDialogComponent>,public phonebookService: PhonebookService, @Inject(MAT_DIALOG_DATA) public contactId: any) { }
 
@@ -17,13 +16,6 @@ export class DeleteContactDialogComponent implements OnInit {
   //calling the delete method from contactService
   deleteContact(): void {
     this.phonebookService.deleteContact(this.contactId);
-
-    this.closeModal();
-  }
-
-  //close the modal
-  closeModal(): void {
     this.dialogRef.close();
   }
-
 }

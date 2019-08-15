@@ -3,13 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var table_1 = require("@angular/material/table");
 //default static data defined 
 var ELEMENT_DATA = [
-    { position: 0, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
-    { position: 1, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
-    { position: 2, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
-    { position: 3, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
-    { position: 4, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
-    { position: 5, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
-    { position: 6, name: 'Nicholson 1', surname: 'Galela', phone: '840739163' },
+    { position: 0, name: 'Nicholson 1', surname: 'Galela', phone: '111111111' },
+    { position: 1, name: 'Nicholson 1', surname: 'Galela', phone: '222222222' },
+    { position: 2, name: 'Nicholson 1', surname: 'Galela', phone: '333333333' },
+    { position: 3, name: 'Nicholson 1', surname: 'Galela', phone: '444444444' },
+    { position: 4, name: 'Nicholson 1', surname: 'Galela', phone: '555555555' },
+    { position: 5, name: 'Nicholson 1', surname: 'Galela', phone: '666666666' },
+    { position: 6, name: 'Nicholson 1', surname: 'Galela', phone: '777777777' },
 ];
 var PhonebookService = /** @class */ (function () {
     function PhonebookService() {

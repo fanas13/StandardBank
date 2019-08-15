@@ -47,6 +47,10 @@ export class PhonebookGridListComponent implements OnInit {
   openEditModal(id: number) {
     const dialogRef = this.dialog.open(EditContactDialogComponent, {
       width: '500px',
+      data: {
+        contactDetails: this.dataSource.filteredData,
+        contactId: id
+      }
     });
 
     dialogRef.afterClosed().subscribe(result => {
