@@ -19,3 +19,22 @@
   color: #ffffff;
   font-size: 18px
 }
+
+.actionIcons {
+  color: #ffffff
+}
+
+
+.danger {
+  background-color: #BB2124;
+}
+
+.warning {
+  background-color: #F0AD4E;
+}
+
+.actionButtonContainer {
+  margin: 5px;
+  width: 50px;
+  height: 50px
+}

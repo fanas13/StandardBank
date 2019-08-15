@@ -7,12 +7,16 @@ var ELEMENT_DATA = [
 ];
 var PhonebookService = /** @class */ (function () {
     function PhonebookService() {
-        this.displayedColumns = ['position', 'name', 'surname', 'phone'];
         this.dataSource = new table_1.MatTableDataSource(ELEMENT_DATA);
     }
     //filter contacts
     PhonebookService.prototype.applyFilter = function (filterValue) {
         this.dataSource.filter = filterValue.trim().toLowerCase();
+    };
+    PhonebookService.prototype.renderEditDeleteButton = function () {
+        return ("test");
+    };
+    PhonebookService.prototype.editContact = function (contactId) {
     };
     //method to create contact
     PhonebookService.prototype.createContant = function (contact) {

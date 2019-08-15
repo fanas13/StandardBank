@@ -14,7 +14,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 export class PhonebookService {
-  displayedColumns: string[] = ['position', 'name', 'surname', 'phone'];
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
@@ -23,6 +22,14 @@ export class PhonebookService {
   //filter contacts
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  editContact(contactId) {
+
+  }
+
+  deleteContact(contactId) {
+
   }
 
   //method to create contact

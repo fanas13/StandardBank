@@ -10,7 +10,7 @@ import { debug } from 'util';
 })
 
 export class PhonebookGridListComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'surname', 'phone'];
+  displayedColumns: string[] = ['position', 'name', 'surname', 'phone', 'action'];
   dataSource = this.phonebookService.dataSource;
 
   constructor(public phonebookService: PhonebookService) { }
@@ -20,5 +20,12 @@ export class PhonebookGridListComponent implements OnInit {
     this.phonebookService.renderInitials();
   }
 
+  editContact(id: number) {
+    this.phonebookService.editContact(id)
+  }
+
+  deleteContact(id: number) {
+    this.phonebookService.deleteContact(id)
+  }
 
 }
